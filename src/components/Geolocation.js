@@ -1,7 +1,7 @@
 // Geolocation calls the geolocation api to get user info
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
-import { fetchLocale } from "../store/actions";
+import { fetchLocale } from "../store/actions/LocationActions";
 
 const Geolocation = props => {
     useEffect(() => {

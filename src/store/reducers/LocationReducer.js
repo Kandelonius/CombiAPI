@@ -1,9 +1,9 @@
 // Reducer for the location actions
-import { FETCH, FETCH_SUCCESS, FETCH_FAILURE } from "../actions";
+import { FETCH, FETCH_SUCCESS, FETCH_FAILURE } from "../actions/LocationActions";
 
 const initialState = {
     isFetching: false,
-    smurf: null,
+    location: null,
     add: null,
     error: ""
 };

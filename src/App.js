@@ -5,7 +5,7 @@ import Geolocation from "./components/Geolocation";
 const App = () => {
   return (
     <div className="App">
-      <Geolocation />
+      {/* <Geolocation /> */}
     </div>
   );
 }
