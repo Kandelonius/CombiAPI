@@ -8,7 +8,7 @@ const initialState = {
     error: ""
 };
 
-export const smurfReducer = (state = initialState, action) => {
+export const localeReducer = (state = initialState, action) => {
     switch (action.type) {
         case FETCH:
             return {
@@ -19,7 +19,7 @@ export const smurfReducer = (state = initialState, action) => {
             return {
                 ...state,
                 isFetching: false,
-                smurf: action.payload,
+                locale: action.payload,
             };
         case FETCH_FAILURE:
             return {

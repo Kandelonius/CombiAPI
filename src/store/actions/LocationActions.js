@@ -1,21 +1,22 @@
 // action file for the location specific actions
 import axios from "axios";
 
-const url = "https://ipvigilante.com/";
-const format = "json/";
-const IP = "8.8.8.8";
-const params = '';
-const header = {"Access-Control-Allow-Origin": "*"};
+const url = "https://api.scryfall.com/cards";
+// const url = "https://ipvigilante.com/";
+// const format = "json/";
+// const IP = "8.8.8.8";
+// const params = '';
+// const header = {"Access-Control-Allow-Origin": "*"};
 export const FETCH = 'FETCH';
 export const FETCH_SUCCESS = 'FETCH_SUCCESS';
 export const FETCH_FAILURE = 'FETCH_FAILURE';
-
+// `${url}${format}${IP}${params}`, header
 export const fetchLocale = () => dispatch => {
     dispatch({ type: FETCH });
-    axios.get(`${url}${format}${IP}${params}`, header)
+    axios.get(url)
         .then(res => {
             console.log('res ', res);
-            // dispatch({ type: FETCH_SUCCESS, payload: res.data });
+            dispatch({ type: FETCH_SUCCESS, payload: res.data.data });
         })
         .catch(err => {
             console.log(err);

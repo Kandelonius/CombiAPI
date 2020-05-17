@@ -1,5 +1,4 @@
 React-redux project combining several apis to be used either together or seperately.
-testing nested git possibility
 
 will get user information using a location tracker and be able to give area recommendations and weather information based on that.
 
