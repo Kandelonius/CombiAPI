@@ -1,5 +1,3 @@
-// action file for the location specific actions
-
 // import axios from "axios";
 
 // const url = "https://api.scryfall.com/cards";

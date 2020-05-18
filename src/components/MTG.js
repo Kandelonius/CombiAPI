@@ -1,21 +1,20 @@
-// Geolocation calls the geolocation api to get user info
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import { fetchData } from "../store/actions";
 
-const Geolocation = props => {
+const MTG = props => {
     useEffect(() => {
         props.fetchData();
     }, []);
     console.log("init ",props);
     return (
         <main>
-            <h1>Locale</h1>
+            <h1>MTG</h1>
             {props.isFetching && <h3>Fetching data...</h3>}
-            {props.locale && <div className='success'>
-                {props.locale.flavor_name}
-                <h3>{props.locale.image_uris.large}</h3>
-                <h3>{props.locale.rarity}</h3>
+            {props.MTG && <div className='success'>
+                {props.MTG.data.flavor_name}
+                <h3>{props.MTG.data.image_uris.large}</h3>
+                <h3>{props.MTG.data.rarity}</h3>
             </div>}
             {props.error && <div className='failure'>
                 <h1>{props.error}</h1>
@@ -24,16 +23,16 @@ const Geolocation = props => {
     )
 }
 const mapStateToProps = state => {
-    console.log('BRE', state.locale);
+    console.log('BRE', state.MTG);
     return {
-        isFetching: state.locale.isFetching,
-        locale: state.locale.locale,
-        add: state.locale.add,
-        error: state.locale.error
+        isFetching: state.MTG.isFetching,
+        MTG: state.MTG.MTG,
+        add: state.MTG.add,
+        error: state.MTG.error
     };
 };
 
 export default connect(
     mapStateToProps,
     { fetchData }
-)(Geolocation);
+)(MTG);
