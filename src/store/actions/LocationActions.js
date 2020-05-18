@@ -16,7 +16,7 @@ export const fetchLocale = () => dispatch => {
     axios.get(url)
         .then(res => {
             console.log('res ', res);
-            dispatch({ type: FETCH_SUCCESS, payload: res.data.data });
+            dispatch({ type: FETCH_SUCCESS, payload: res.data.data[0] });
         })
         .catch(err => {
             console.log(err);

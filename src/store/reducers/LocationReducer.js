@@ -3,7 +3,7 @@ import { FETCH, FETCH_SUCCESS, FETCH_FAILURE } from "../actions/LocationActions"
 
 const initialState = {
     isFetching: false,
-    location: null,
+    locale: null,
     add: null,
     error: ""
 };

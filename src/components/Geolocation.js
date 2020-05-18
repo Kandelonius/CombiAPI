@@ -13,7 +13,7 @@ const Geolocation = props => {
             <h1>Locale</h1>
             {props.isFetching && <h3>Fetching data...</h3>}
             {props.locale && <div className='success'>
-                {props.locale[0].flavor_name}
+                {props.locale.flavor_name}
                 <h3>{props.locale.image_uris.large}</h3>
                 <h3>{props.locale.rarity}</h3>
             </div>}
@@ -24,7 +24,7 @@ const Geolocation = props => {
     )
 }
 const mapStateToProps = state => {
-    console.log('BRE', state);
+    console.log('BRE', state.locale);
     return {
         isFetching: state.locale.isFetching,
         locale: state.locale.locale,
