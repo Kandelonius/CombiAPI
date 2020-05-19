@@ -7,7 +7,7 @@ import axios from "axios";
 // const params = '';
 // const header = {"Access-Control-Allow-Origin": "*"};
 
-// const url = "https://api.scryfall.com/cards";
+const url = "https://api.scryfall.com/cards";
 export const FETCH = 'FETCH';
 export const FETCH_SUCCESS = 'FETCH_SUCCESS';
 export const FETCH_FAILURE = 'FETCH_FAILURE';

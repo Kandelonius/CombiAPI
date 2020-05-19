@@ -1,12 +1,12 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
-import { fetchData } from "../store/actions";
+import { fetchMTG } from "../store/actions/MTGActions";
 
 const MTG = props => {
-    useEffect(() => {
-        props.fetchData();
-    }, []);
     console.log("init ",props);
+    useEffect(() => {
+        props.fetchMTG();
+    }, []);
     return (
         <main>
             <h1>MTG</h1>
@@ -34,5 +34,5 @@ const mapStateToProps = state => {
 
 export default connect(
     mapStateToProps,
-    { fetchData }
+    { fetchMTG }
 )(MTG);

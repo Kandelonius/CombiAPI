@@ -1,6 +1,9 @@
 // import axios from "axios";
 
 // const url = "https://api.scryfall.com/cards";
+
+// try to send the address from this file to the main action file to be processed by the reducer.
+
 // // const url = "https://ipvigilante.com/";
 // // const format = "json/";
 // // const IP = "8.8.8.8";
