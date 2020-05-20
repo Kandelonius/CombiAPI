@@ -14,8 +14,8 @@ const Geolocation = props => {
             {props.isFetching && <h3>Fetching data...</h3>}
             {props.locale && <div className='success'>
                 {props.locale.flavor_name}
-                <h3>{props.locale.geo.latitude}</h3>
-                <h3>{props.locale.geo.longitude}</h3>
+                <h3>Latitude: {props.locale.geo.latitude}</h3>
+                <h3>Longitude: {props.locale.geo.longitude}</h3>
                 {/* <h3>{props.locale.rarity}</h3> */}
             </div>}
             {props.error && <div className='failure'>

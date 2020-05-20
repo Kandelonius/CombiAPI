@@ -7,6 +7,10 @@ GET https://api.ipgeolocationapi.com/geolocate HTTP/1.1
 
 GET https://api.ipgeolocationapi.com/geolocate/91.213.103.0 HTTP/1.1
 
+TicketMaster uses Lat/Long
+
+Zomato for restaurants.
+
 {
     "continent": "Europe",
     "alpha2": "DE",
