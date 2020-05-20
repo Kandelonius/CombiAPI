@@ -1,11 +1,11 @@
 // Geolocation calls the geolocation api to get user info
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
-import { fetchData } from "../store/actions";
+import { fetchLocale } from "../store/actions/LocationActions";
 
 const Geolocation = props => {
     useEffect(() => {
-        props.fetchData();
+        props.fetchLocale();
     }, []);
     console.log("init ",props);
     return (
@@ -14,8 +14,9 @@ const Geolocation = props => {
             {props.isFetching && <h3>Fetching data...</h3>}
             {props.locale && <div className='success'>
                 {props.locale.flavor_name}
-                <h3>{props.locale.image_uris.large}</h3>
-                <h3>{props.locale.rarity}</h3>
+                <h3>{props.locale.geo.latitude}</h3>
+                <h3>{props.locale.geo.longitude}</h3>
+                {/* <h3>{props.locale.rarity}</h3> */}
             </div>}
             {props.error && <div className='failure'>
                 <h1>{props.error}</h1>
@@ -35,5 +36,5 @@ const mapStateToProps = state => {
 
 export default connect(
     mapStateToProps,
-    { fetchData }
+    { fetchLocale }
 )(Geolocation);
