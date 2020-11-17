@@ -1,0 +1,10 @@
+body{
+    background-color: ghostwhite;
+}
+main{
+    background-color: red;
+    width: 40%;
+    margin: auto;
+    border-radius: 50%;
+    border: 15px solid blanchedalmond;
+}

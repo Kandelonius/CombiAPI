@@ -2,6 +2,7 @@
 import React from "react";
 import "./App.css";
 import Geolocation from "./components/Geolocation";
+import Brewery from "./components/Brewery";
 // import MTG from "./components/MTG";
 
 const App = () => {
@@ -9,8 +10,8 @@ const App = () => {
 
     <div className="App">
       hey
-
-      <Geolocation />
+      <Brewery />
+      {/* <Geolocation /> */}
       {/* <MTG /> */}
     </div>
   );
